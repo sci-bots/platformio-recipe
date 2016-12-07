@@ -20,7 +20,10 @@ Install
 The [Windows 32-bit build][2] may be installed from the
 [`wheeler-microfluidics`][3] channel using:
 
-    conda install -c wheeler-microfluidics platformio
+    conda install -c conda-forge -c wheeler-microfluidics platformio
+
+**Note** The `conda-forge` channel must be included in the install command to
+provide the `bottle` Conda package.
 
 
 [1]: http://platformio.org/
