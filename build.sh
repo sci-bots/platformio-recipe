@@ -24,5 +24,5 @@ echo "#!/bin/sh"> ${DEACTIVATE_DIR}/platformio-env-home_dir.sh
 echo unset PLATFORMIO_HOME_DIR>> ${DEACTIVATE_DIR}/platformio-env-home_dir.sh
 
 # Install platformio from pip
-"${PYTHON}" -m pip install --no-cache "platformio==3.1.0"
+"${PYTHON}" -m pip install --no-cache "platformio==3.2.1"
 rc=$?; if [[ $rc != 0  ]]; then exit $rc; fi
