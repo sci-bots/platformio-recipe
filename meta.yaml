@@ -1,6 +1,6 @@
 package:
   name: platformio
-  version: 3.2.1
+  version: 3.3.0
 
 build:
   entry_points:
@@ -12,6 +12,7 @@ build:
 
 requirements:
   build:
+    - arrow
     - bottle <0.13
     - click <6,>=5
     - colorama
@@ -22,10 +23,12 @@ requirements:
     - requests <3,>=2.4.0
     - semantic_version >=2.5.0
   run:
+    - arrow
     - bottle <0.13
     - click <6,>=5
     - colorama
     - lockfile <0.13,>=0.9.1
+    - pip
     - pyserial >=3,<4
     - python
     - requests <3,>=2.4.0
