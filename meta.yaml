@@ -1,6 +1,6 @@
 package:
   name: platformio
-  version: 3.4.1
+  version: 3.5.0
 
 build:
   entry_points:
@@ -12,7 +12,8 @@ build:
 
 requirements:
   build:
-    - arrow
+    - arrow !=0.11.0,>=0.10.0
+    - backports.functools_lru_cache
     - bottle <0.13
     - click <6,>=5
     - colorama
@@ -23,7 +24,8 @@ requirements:
     - requests <3,>=2.4.0
     - semantic_version >=2.5.0
   run:
-    - arrow
+    - arrow !=0.11.0,>=0.10.0
+    - backports.functools_lru_cache
     - bottle <0.13
     - click <6,>=5
     - colorama
