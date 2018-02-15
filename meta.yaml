@@ -12,6 +12,7 @@ build:
   entry_points:
     - pio = platformio.__main__:main
     - platformio = platformio.__main__:main
+  noarch: true
 
 requirements:
   build:
