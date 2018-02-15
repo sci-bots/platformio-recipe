@@ -1,11 +1,12 @@
-{% set VERSION = '3.5.1' %}
-{% set REPO = 'https://github.com/platformio/platformio-core' %}
+{% set VERSION = '3.5.2b2.post16' %}
+{% set REPO = 'https://github.com/sci-bots/platformio-core' %}
+{% set COMMIT = '7bd34d6226ae82d9ead173d34230a8449f992b62' %}
 package:
   name: platformio
   version: {{ VERSION }}
 
 source:
-  url: {{ REPO }}/archive/v{{ VERSION }}.tar.gz
+  url: {{ REPO }}/archive/{{ COMMIT }}.tar.gz
 
 build:
   number: 0
@@ -13,6 +14,7 @@ build:
     - pio = platformio.__main__:main
     - platformio = platformio.__main__:main
   noarch: true
+  string: 'g{{ COMMIT[:8] }}'
 
 requirements:
   build:
