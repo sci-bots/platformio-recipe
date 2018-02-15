@@ -1,19 +1,20 @@
+{% set VERSION = '3.5.0' %}
+{% set REPO = 'https://github.com/platformio/platformio-core' %}
 package:
   name: platformio
-  version: 3.5.0
+  version: {{ VERSION }}
+
+source:
+  url: {{ REPO }}/archive/v{{ VERSION }}.tar.gz
 
 build:
+  number: 0
   entry_points:
     - pio = platformio.__main__:main
     - platformio = platformio.__main__:main
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  number: 1
 
 requirements:
   build:
-    - arrow !=0.11.0,>=0.10.0
-    - backports.functools_lru_cache
     - bottle <0.13
     - click <6,>=5
     - colorama
@@ -23,15 +24,17 @@ requirements:
     - python
     - requests <3,>=2.4.0
     - semantic_version >=2.5.0
+
   run:
-    - arrow !=0.11.0,>=0.10.0
-    - backports.functools_lru_cache
     - bottle <0.13
     - click <6,>=5
     - colorama
     - lockfile <0.13,>=0.9.1
-    - pip
     - pyserial >=3,<4
     - python
     - requests <3,>=2.4.0
     - semantic_version >=2.5.0
+
+about:
+  home: {{ REPO }}
+  license: Apache 2.0

@@ -1,4 +1,3 @@
-REM Copy nanopb C source and headers to Arduino
 set ACTIVATE_DIR="%PREFIX%"\etc\conda\activate.d
 set DEACTIVATE_DIR="%PREFIX%"\etc\conda\deactivate.d
 set SHARE_DIR="%PREFIX%"\share\platformio
@@ -25,7 +24,5 @@ REM Write script to unset `PLATFORMIO_HOME_DIR` environment variable
 echo @echo off> %DEACTIVATE_DIR%\platformio-env-home_dir.bat
 echo set PLATFORMIO_HOME_DIR=>> %DEACTIVATE_DIR%\platformio-env-home_dir.bat
 
-REM Install platformio from pip
-"%PYTHON%" -m pip install --no-cache "platformio==%PKG_VERSION%"
+%PYTHON% setup.py install --single-version-externally-managed --record record.txt
 if errorlevel 1 exit 1
-:: Add more build steps here, if they are necessary.
