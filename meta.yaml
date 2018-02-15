@@ -1,11 +1,12 @@
 {% set VERSION = '3.5.1' %}
 {% set REPO = 'https://github.com/platformio/platformio-core' %}
+{% set COMMIT = 'v' + VERSION %}
 package:
   name: platformio
   version: {{ VERSION }}
 
 source:
-  url: {{ REPO }}/archive/v{{ VERSION }}.tar.gz
+  url: {{ REPO }}/archive/{{ COMMIT }}.tar.gz
 
 build:
   number: 0
