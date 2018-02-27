@@ -1,6 +1,6 @@
-{% set VERSION = '3.5.2b2.post18' %}
+{% set VERSION = '3.5.2b2.post19' %}
 {% set REPO = 'https://github.com/sci-bots/platformio-core' %}
-{% set COMMIT = '021c0256c20b395eb8768d1764390fb73be1f3de' %}
+{% set COMMIT = '58ebd7ea2a3697a84eee33f6dc9e5e74734d4d1b' %}
 package:
   name: platformio
   version: {{ VERSION }}
