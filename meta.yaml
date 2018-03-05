@@ -9,7 +9,7 @@ source:
   url: {{ REPO }}/archive/{{ COMMIT }}.tar.gz
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pio = platformio.__main__:main
     - platformio = platformio.__main__:main

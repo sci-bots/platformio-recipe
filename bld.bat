@@ -12,7 +12,7 @@ type NUL> %SHARE_DIR%\.empty
 
 REM Write script to set `PLATFORMIO_LIB_EXTRA_DIRS` environment variable
 echo @echo off> %ACTIVATE_DIR%\platformio-env-lib_extra_dirs.bat
-echo set PLATFORMIO_LIB_EXTRA_DIRS=%%CONDA_PREFIX%%\Library\include\Arduino>> %ACTIVATE_DIR%\platformio-env-lib_extra_dirs.bat
+echo set PLATFORMIO_LIB_EXTRA_DIRS=%%CONDA_PREFIX%%\share\platformio\include>> %ACTIVATE_DIR%\platformio-env-lib_extra_dirs.bat
 REM Write script to set `PLATFORMIO_HOME_DIR` environment variable
 echo @echo off> %ACTIVATE_DIR%\platformio-env-home_dir.bat
 echo set PLATFORMIO_HOME_DIR=%%CONDA_PREFIX%%\share\platformio>> %ACTIVATE_DIR%\platformio-env-home_dir.bat
