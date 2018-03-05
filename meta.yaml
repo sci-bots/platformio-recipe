@@ -9,12 +9,12 @@ source:
   url: {{ REPO }}/archive/{{ COMMIT }}.tar.gz
 
 build:
-  number: 0
+  number: 2
   entry_points:
     - pio = platformio.__main__:main
     - platformio = platformio.__main__:main
   noarch: true
-  string: 'g{{ COMMIT[:8] }}'
+  string: 'g{{ COMMIT[:8] }}_2'
 
 requirements:
   build:
@@ -34,6 +34,7 @@ requirements:
     - click <6,>=5
     - colorama
     - lockfile <0.13,>=0.9.1
+    - platformio-helpers >=0.6
     - pyserial >=3,<4
     - python
     - requests <3,>=2.4.0
