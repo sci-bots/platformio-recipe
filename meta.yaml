@@ -9,12 +9,12 @@ source:
   url: {{ REPO }}/archive/{{ COMMIT }}.tar.gz
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - pio = platformio.__main__:main
     - platformio = platformio.__main__:main
   noarch: true
-  string: 'g{{ COMMIT[:8] }}'
+  string: 'g{{ COMMIT[:8] }}_2'
 
 requirements:
   build:
