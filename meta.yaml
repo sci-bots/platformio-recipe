@@ -34,6 +34,7 @@ requirements:
     - click <6,>=5
     - colorama
     - lockfile <0.13,>=0.9.1
+    - platformio-helpers >=0.6
     - pyserial >=3,<4
     - python
     - requests <3,>=2.4.0
